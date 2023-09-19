@@ -5,12 +5,12 @@ fn print_type_of<T>(_: &T) {
     println!("{}", std::any::type_name::<T>())
 }
 fn main() {
-    let response = reqwest::blocking::get("http://www.torontoplex.com/listings/screenings.html");
+    let response = reqwest::blocking::get("https://letterboxd.com/torontoplex/lists/");
 
     let html_content = response.unwrap().text().unwrap();
     let document = scraper::Html::parse_document(&html_content);
 
-    // println!("{html_content}");
+    println!("{html_content}");
 
     let p_selector = scraper::Selector::parse("p").unwrap();
     let tr_selector = scraper::Selector::parse("tr").unwrap();

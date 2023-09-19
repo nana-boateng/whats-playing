@@ -1,5 +1,10 @@
 <h1>What's Playing in Toronto?</h1>
-<div class="flex flex-row justify-around">
-  <app-movie-item></app-movie-item>
-  <app-movie-item></app-movie-item>
+<div class="flex flex-col justify-between">
+  <section>
+    <app-search></app-search>
+  </section>
+  <section class="flex flex-row">
+    <app-movie-item></app-movie-item>
+    <app-movie-item></app-movie-item>
+  </section>
 </div>
